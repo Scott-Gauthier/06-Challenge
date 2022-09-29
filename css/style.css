@@ -1,3 +1,4 @@
+/*set header styling*/
 header {
     display: inline-flex;
     flex-direction: row;
@@ -27,6 +28,7 @@ header {
     justify-content: right;
     margin-right: 5%;
 }
+/*set main body styling*/
 main {
     display: inline-flex;
     flex-direction: row;
@@ -39,16 +41,16 @@ main {
     color: #160404;
     margin-top: 20px;
 }
-.left {
-    width: 10%;
+/*create margin on the sides and set center*/
+.main-left {
+    width: 30%;
 }
-.center {
+.main-center {
     display: inline-flex;
     flex-direction: column;
-    width: 80%;
+    width: 70%;
     text-align: center;
     color: #160404; /*4b2e83*/
-    margin-top: 25px;
 }
 .card-lower {
     margin-top: 10px;
@@ -56,12 +58,9 @@ main {
     justify-content: center;
     display: block;
 }
-.right {
-    display: inline-flex;
-    width: 10%;
-}
+/*style button*/
 button {
-    background: lightgreen;
+    background: #4b2e83;
     width: 250px;
     height: 50px;
     border-radius: 10px;
@@ -69,6 +68,7 @@ button {
     margin: 5px;
     justify-content: center;
 }
+/*set footer styling*/
 footer {
     display: inline-flex;
     flex-direction: row;
@@ -81,6 +81,7 @@ footer {
     color: #160404;
     margin-top: 20px;
 }
+/*misc additional styling and settings*/
 .hidden {
     display: none;
 }
@@ -94,7 +95,6 @@ footer {
     background: lightgray;
 }
 .border-top {
-    border-top: 25px solid black;
+    border-top: 3px solid lightgray;
     padding-top: 5px;
 }
-
