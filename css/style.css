@@ -8,8 +8,9 @@ header {
     height: 100%;
     width: 100%;
     font-size: 16px;
-    color: #160404;
+    color: white;
     margin-top: 20px;
+    background: linear-gradient(to left, #20084a, #3463bc);
 }
 .header-left {
     width: 20%;
@@ -28,6 +29,7 @@ header {
     justify-content: right;
     margin-right: 5%;
 }
+
 /*set main body styling*/
 main {
     display: inline-flex;
@@ -41,30 +43,58 @@ main {
     color: #160404;
     margin-top: 20px;
 }
+.margin {
+    margin: 5px 0 5px 0;
+}
 /*create margin on the sides and set center*/
 .main-left {
     width: 30%;
+    margin-right: 1%;
 }
 .main-center {
     display: inline-flex;
     flex-direction: column;
-    width: 70%;
+    width: 69%;
     text-align: center;
     color: #160404; /*4b2e83*/
+
+}
+.card-main {
+    border-radius: 5px;
+    border-color: black;
+    text-align: left;
 }
 .card-lower {
     margin-top: 10px;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     display: block;
+    text-align: left;
+}
+.card{
+    margin: 0 1% 0 1%;
+}
+.card5day {
+    width: 18%;
+    display: inline-flex;
+    flex-direction: row;
+    font-size: 10px;
+}
+.width100 {
+    width: 100%;
 }
 /*style button*/
+
+.lightblue {
+    background: lightblue;
+}
+.darkgray {
+    background: darkgray;
+}
 button {
-    background: #4b2e83;
-    width: 250px;
-    height: 50px;
+    width: 90%;
     border-radius: 10px;
-    color: white;
+    color: black;
     margin: 5px;
     justify-content: center;
 }

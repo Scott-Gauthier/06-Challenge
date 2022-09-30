@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css" />
-    <!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Weather Dashboard</title>
 </head>
@@ -25,70 +25,72 @@
             <div class="input-group mb-3">
                   <input type="text" id="cityInput" class="form-control" placeholder="San diego" aria-label="San diego" aria-describedby="basic-addon2">
             </div>
-            <button id ="btnsubmit">Search</button>
+            <button id ="btnsubmit" class="lightblue">Search</button>
             <section class="border-top"></section>
             <section id="searchhistory">
-                <p>1</p>
-                <p>2</p>
-                <p>3</p>
             </section>
         </section>
         <section class="main-center">       
             <section class="card-title">
             </section>
             <section class="card-main">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 id="citydisplay" class="card-title">Card title</h5>
+                <div class="card">
+                    <div class="card-body width100">
+                      <h5 id="citydisplay" class="card-title"></h5>
                       <p id="temp" class="card-text"></p>
                       <p id="wind" class="card-text"></p>
                       <p id="humidity" class="card-text"></p>
-                      <p id="UV" class="card-text">UV Index: </p>
                     </div>
                   </div>
 
             </section>
+            <h7 id="5-day" class="width100">5-Day Forecast:</h7>   
             <section class="card-lower">
-                <h6 id="5-day">5-Day Forecast:</h6>
-                <div class="card" style="width: 18rem;">
+             
+                <div class="card5day darkgray margin">
                     <div class="card-body">
-                      <h5 id="citydisplay5" class="card-title">Card title</h5>
+                      <p id="citydisplay5" class="card-title"></p>
+                      <img id="icon5"></img>
                       <p id="temp5" class="card-text"></p>
                       <p id="wind5" class="card-text"></p>
                       <p id="humidity5" class="card-text"></p>
                     </div>
                   </div>
 
-                  <div class="card" style="width: 18rem;">
+                  <div class="card5day darkgray margin">
                     <div class="card-body">
-                      <h5 id="citydisplay5" class="card-title">Card title</h5>
+                      <p id="citydisplay5" class="card-title"></p>
+                      <img id="icon5"></img>
                       <p id="temp5" class="card-text"></p>
                       <p id="wind5" class="card-text"></p>
                       <p id="humidity5" class="card-text"></p>
                     </div>
                   </div>
 
-                  <div class="card" style="width: 18rem;">
+                  <div class="card5day darkgray margin">
                     <div class="card-body">
-                      <h5 id="citydisplay5" class="card-title">Card title</h5>
+                      <p id="citydisplay5" class="card-title"></p>
+                      <img id="icon5"></img>
                       <p id="temp5" class="card-text"></p>
                       <p id="wind5" class="card-text"></p>
                       <p id="humidity5" class="card-text"></p>
                     </div>
                   </div>
 
-                  <div class="card" style="width: 18rem;">
+                  <div class="card5day darkgray margin">
                     <div class="card-body">
-                      <h5 id="citydisplay5" class="card-title">Card title</h5>
+                      <p id="citydisplay5" class="card-title"></p>
+                      <img id="icon5"></img>
                       <p id="temp5" class="card-text"></p>
                       <p id="wind5" class="card-text"></p>
                       <p id="humidity5" class="card-text"></p>
                     </div>
                   </div>
 
-                  <div class="card" style="width: 18rem;">
+                  <div class="card5day darkgray margin">
                     <div class="card-body">
-                      <h5 id="citydisplay5" class="card-title">Card title</h5>
+                      <p id="citydisplay5" class="card-title"></p>
+                      <img id="icon5"></img>
                       <p id="temp5" class="card-text"></p>
                       <p id="wind5" class="card-text"></p>
                       <p id="humidity5" class="card-text"></p>
