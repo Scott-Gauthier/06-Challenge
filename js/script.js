@@ -5,6 +5,7 @@ var temp = document.querySelector("#temp");
 var wind = document.querySelector("#wind");
 var humidity = document.querySelector("#humidity");
 var citydisplay = document.querySelector("#citydisplay");
+var return_message = document.querySelector("#return_message");
 var inputObject = [];
 var APIKey = "bad1392b1c1d099b4617d052419cbc8d";
 
@@ -55,14 +56,16 @@ document.querySelector("#btnsubmit").addEventListener("click", function(event) {
     cityName = cityInput.value.split(",");
     stateabbreviations = ['AL','AK','AZ','AR','CA','CO','CT','DE','DC','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA',"WA",'WV','WI','WY']
 
+    if (!cityName[1]) {
+      return_message.textContent = `Please enter city data including state or country code. Examples: Seattle, WA or London, GB.`
+    } else {
     if(stateabbreviations.includes(cityName[1].toUpperCase().replace(" ",""))) {
-      console.log("State abb works");
+      return_message.textContent = ``
       inputObject = {
         City: `${cityName[0]}`,
         Statecode: `${cityName[1].toUpperCase().replace(" ","")+', USA'}`,
       }
     } else {
-      console.log("Darn it!");
       inputObject = {
         City: `${cityName[0]}`,
         Statecode: `${cityName[1].toUpperCase().replace(" ","")}`,
@@ -73,16 +76,10 @@ document.querySelector("#btnsubmit").addEventListener("click", function(event) {
     
   
     function searchObject(a) {
-      console.log(a.Statecode);
-      console.log(inputObject.Statecode);
       return a.City === inputObject.City && a.Statecode === inputObject.Statecode;
     }
-
-    console.log(textEntered.find(searchObject));
     if (textEntered.find(searchObject)) {
-      console.log("Already exits!");
     } else {
-      console.log("Fix me!");
     textEntered.push(inputObject);
     localStorage.setItem("textEntered", JSON.stringify(textEntered));
     }
@@ -91,7 +88,7 @@ document.querySelector("#btnsubmit").addEventListener("click", function(event) {
     openWeatherAPI();
    return inputObject;
 
-});
+}});
 }
 activeButtons();
 
@@ -104,7 +101,6 @@ function latlonAPI() {
       return response.json();
   })
     .then(function (data) {
-        console.log(data);
         let lat = data.coord.lat;
         let lon = data.coord.lon;
         var iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
@@ -132,8 +128,6 @@ let requestUrl = latlonAPI()
         return response.json();
     })
         .then(function (data) {
-        console.log(data);
-        console.log(requestUrl);
         var icon5 = document.querySelectorAll(`#icon5`),i;
         var temp5 = document.querySelectorAll(`#temp5`),i;
         var wind5 = document.querySelectorAll(`#wind5`),i;

@@ -128,3 +128,6 @@ footer {
     border-top: 3px solid lightgray;
     padding-top: 5px;
 }
+.textRed {
+    color: red;
+}
